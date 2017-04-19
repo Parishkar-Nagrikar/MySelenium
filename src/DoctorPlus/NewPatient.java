@@ -1,4 +1,4 @@
-package com.com.DoctorPlus;
+package DoctorPlus;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
