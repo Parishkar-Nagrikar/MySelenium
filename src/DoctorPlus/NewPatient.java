@@ -56,7 +56,6 @@ public class NewPatient
         webDriver.findElement(By.id("phone_contact")).sendKeys("9876543210");
 
         //Select Sex From DropDown Select
-
         Select dropDownSelect=new Select(webDriver.findElement(By.id("sex")));
         dropDownSelect.selectByVisibleText("Male");
 
