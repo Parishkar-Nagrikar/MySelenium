@@ -1,0 +1,19 @@
+<suite name="Auyomation Testing" verbose="1" >
+
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter" />
+    </listeners>
+
+
+    <test name="Login Tests" >
+        <classes>
+            <class name="DoctorPlus.DoctorPlusTestNg" />
+        </classes>
+    </test>
+
+    <test name="Demo Selenium Guru" >
+        <classes>
+            <class name="DoctorPlus.SeleniumGuruTestNg" />
+        </classes>
+    </test>
+</suite>

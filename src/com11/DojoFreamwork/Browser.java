@@ -53,20 +53,16 @@ public class Browser
     {
         findElementByName(name).sendKeys(key);
     }
-
     public void clickByName(String name)
     {
         findElementByName(name).click();
     }
-
     public WebElement findElementByName(String name)
     {
         return webdriver.findElement(By.name(name));
     }
-
     public void clickByPath(String path)
     {
         webdriver.findElement(By.xpath(path)).click();
     }
-
 }

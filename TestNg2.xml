@@ -1,0 +1,19 @@
+<suite name="Auyomation Testing" verbose="1" >
+
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+
+    <test name="DoctorPlus Tests" >
+        <classes>
+            <class name="DoctorPlus.DoctorPlusTestNg" />
+        </classes>
+    </test>
+
+    <test name="Selenium Guru Test" >
+        <classes>
+            <class name="DoctorPlus.SeleniumGuruTestNg" />
+        </classes>
+    </test>
+</suite>

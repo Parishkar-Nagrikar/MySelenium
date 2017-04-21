@@ -38,7 +38,7 @@ public class TestNGDemo1
         driver.findElement(By.xpath("//*[@id='login']")).click();
 
     }
-    @Test
+    @Test (priority =  0)
     public void myTest2()//In-correct credential
     {
         System.out.println("myTest2 called");
