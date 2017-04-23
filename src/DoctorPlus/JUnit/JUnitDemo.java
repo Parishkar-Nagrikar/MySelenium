@@ -1,31 +1,29 @@
-package DoctorPlus;
+package DoctorPlus.JUnit;
 
+import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by p-star on 4/20/2017.
+ * Created by p-star on 4/19/2017.
  */
-public class TestNGDemo1
+public class JUnitDemo
 {
     WebDriver driver;
 
-    @BeforeMethod
-    public void BeforeMethodFn()
+    @Before
+    public void BeforeFn()
     {
-        System.out.println( "BeforeMethodFn called");
+        System.out.println( "BeforeFn called");
         System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
         driver =new ChromeDriver();
         driver.manage().window().maximize();
     }
 
-    @Test
+   @Test
     public void myTest1()
     {
         System.out.println( "myTest1 called");
@@ -38,7 +36,7 @@ public class TestNGDemo1
         driver.findElement(By.xpath("//*[@id='login']")).click();
 
     }
-    @Test (priority =  0)
+    @Test
     public void myTest2()//In-correct credential
     {
         System.out.println("myTest2 called");
@@ -64,10 +62,10 @@ public class TestNGDemo1
         driver.findElement(By.xpath("//*[@id='pwd_session']")).sendKeys("");
         driver.findElement(By.xpath("//*[@id='login']")).click();
     }
-    @AfterMethod
-   public void AfterMethodFn()
+    @After
+    public void AfterFn()
     {
-        System.out.println( "AfterMethodFn called");
+        System.out.println( "AfterFn called");
         driver.close();
         System.out.println("Program Completed");
     }

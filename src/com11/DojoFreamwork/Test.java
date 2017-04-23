@@ -34,7 +34,6 @@ public class Test {
 
         Browser browser = new Browser(typeOfBrowser);
 
-
         browser.setUrl(Constants.APPLICATION_URL);
 
         browser.waitForDefaultTime();

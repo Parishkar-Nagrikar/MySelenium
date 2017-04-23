@@ -1,6 +1,8 @@
-package DoctorPlus;
+package DoctorPlus.JUnit;
 
-import org.junit.*;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,22 +10,21 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by p-star on 4/19/2017.
+ * Created by p-star on 4/20/2017.
  */
-public class JUnitDemo
+public class JUnitDemo2
 {
-    WebDriver driver;
+   static WebDriver driver;
 
-    @Before
-    public void BeforeFn()
+    @BeforeClass
+    public static void BeforeFn()
     {
-        System.out.println( "BeforeFn called");
+        System.out.println( "BeforeClassFn called");
         System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
         driver =new ChromeDriver();
         driver.manage().window().maximize();
     }
-
-   @Test
+    @Test
     public void myTest1()
     {
         System.out.println( "myTest1 called");
@@ -34,7 +35,6 @@ public class JUnitDemo
         driver.findElement(By.xpath("//*[@id='login_session']")).sendKeys("Admin");
         driver.findElement(By.xpath("//*[@id='pwd_session']")).sendKeys("admin");
         driver.findElement(By.xpath("//*[@id='login']")).click();
-
     }
     @Test
     public void myTest2()//In-correct credential
@@ -62,10 +62,10 @@ public class JUnitDemo
         driver.findElement(By.xpath("//*[@id='pwd_session']")).sendKeys("");
         driver.findElement(By.xpath("//*[@id='login']")).click();
     }
-    @After
-    public void AfterFn()
+    @AfterClass
+    public static void AfterFn()
     {
-        System.out.println( "AfterFn called");
+        System.out.println( "AfterClassFn called");
         driver.close();
         System.out.println("Program Completed");
     }

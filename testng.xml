@@ -7,13 +7,13 @@
 
     <test name="Login Tests" >
         <classes>
-            <class name="DoctorPlus.DoctorPlusTestNg" />
+            <class name="DoctorPlus.TestNG.DoctorPlusTestNg" />
         </classes>
     </test>
 
     <test name="Demo Selenium Guru" >
         <classes>
-            <class name="DoctorPlus.SeleniumGuruTestNg" />
+            <class name="DoctorPlus.TestNG.SeleniumGuruTestNg" />
         </classes>
     </test>
 </suite>

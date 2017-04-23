@@ -2,6 +2,7 @@ package com;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -51,6 +52,11 @@ public class seleniumGuru
         webDriver.findElement(By.xpath("//input[@value='good']")).click();
         webDriver.findElement(By.xpath("//input[@value='excellent']")).click();
         webDriver.findElement(By.xpath("//input[@value='bad']")).click();
+
+
+        ///photo
+        WebElement fileInput = webDriver.findElement(By.name("photo"));
+        fileInput.sendKeys("C:\\Users\\p-star\\Pictures\\regression-testing.jpg");
 
         //Click On Submit
         webDriver.findElement(By.xpath("//input[@value='Submit']")).click();
