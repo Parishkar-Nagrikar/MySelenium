@@ -59,5 +59,7 @@ public class SeleniumGuruTestNg
 
             webDriver.close();
             System.out.println("Program completed");
+
+
         }
     }

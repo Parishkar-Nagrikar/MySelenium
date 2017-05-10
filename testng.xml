@@ -16,4 +16,9 @@
             <class name="DoctorPlus.TestNG.SeleniumGuruTestNg" />
         </classes>
     </test>
+    <test name="Data Provider From Exel" >
+        <classes>
+            <class name="DoctorPlus.DataProvider.DataProvidersFromExelTest" />
+        </classes>
+    </test>
 </suite>

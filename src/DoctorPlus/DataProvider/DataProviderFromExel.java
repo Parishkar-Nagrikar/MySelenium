@@ -18,7 +18,7 @@ public class DataProviderFromExel
     {
         try
         {
-            FileInputStream fileInputStream = new FileInputStream("data.xls");
+            FileInputStream fileInputStream = new FileInputStream("E:\\Development\\MySelenium\\Data\\data.xls");
 
             HSSFWorkbook workbook = new HSSFWorkbook(fileInputStream);
 
@@ -26,14 +26,14 @@ public class DataProviderFromExel
 
             int rowCount= worksheet.getPhysicalNumberOfRows();
 
-            for(int i=1;i<rowCount;i++)
+            for(int i=0;i<rowCount;i++)
             {
                 HSSFRow row = worksheet.getRow(i);
                 HSSFCell cellA1 = row.getCell(0);
-                String a1Val = cellA1.getStringCellValue();
+                String uName = cellA1.getStringCellValue();
                 HSSFCell cellA2 = row.getCell(0);
-                String a2Val = cellA2.getStringCellValue();
-                System.out.println("username:" + a1Val+", Password:" + a2Val);
+                String pass = cellA2.getStringCellValue();
+                System.out.println("username:" + uName+", Password:" + pass);
             }
         }
         catch (FileNotFoundException e)
