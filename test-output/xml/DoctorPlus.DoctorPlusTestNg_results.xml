@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DoctorPlus Tests"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="24.580">
+  <properties />
+  
+  
+            <testcase name="RegisterPatient" time="11.801" classname="DoctorPlus.TestNG.DoctorPlusTestNg" />
+                <testcase name="NevigateToRegistrationPatientPage" time="7.584" classname="DoctorPlus.TestNG.DoctorPlusTestNg" />
+                <testcase name="LogingIn" time="5.195" classname="DoctorPlus.TestNG.DoctorPlusTestNg" />
+      
+</testsuite>
