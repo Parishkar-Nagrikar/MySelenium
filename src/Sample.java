@@ -23,6 +23,5 @@ public class Sample
         System.out.println(numberAsString);
 
         System.out.println("Hello World");
-
     }
 }
