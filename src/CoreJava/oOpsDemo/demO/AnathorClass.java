@@ -1,13 +1,12 @@
 package CoreJava.oOpsDemo.demO;
 
-
-import oOpsDemo.FirstClass;
-import oOpsDemo.InterfaceDemo;
+import CoreJava.oOpsDemo.FirstClass;
+import CoreJava.oOpsDemo.FirstClass;
+import CoreJava.oOpsDemo.InterfaceDemo;
 
 /**
  * Created by p-star on 4/3/2017.
  */
-
 public class AnathorClass extends FirstClass implements InterfaceDemo
 {
     AnathorClass()
@@ -36,6 +35,4 @@ public class AnathorClass extends FirstClass implements InterfaceDemo
         {
             FirstClass fc=new FirstClass();
        }
-
-
 }

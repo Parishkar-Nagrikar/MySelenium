@@ -11,7 +11,7 @@ interface A
 }
 
 //Creating abstract class that provides the implementation of one method of A interface
-abstract class B implements oOpsDemo.demO.A
+abstract class B implements A
 {
     public void c()
     {
@@ -20,7 +20,7 @@ abstract class B implements oOpsDemo.demO.A
 }
 
 //Creating subclass of abstract class, now we need to provide the implementation of rest of the methods
-class M extends oOpsDemo.demO.B
+class M extends B
 {
     public void a()
     {
