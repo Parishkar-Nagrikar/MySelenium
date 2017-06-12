@@ -15,7 +15,6 @@ import java.util.concurrent.TimeUnit;
  */
 public class AddStaff
 {
-
     @Test
     public void AddStaff_()throws ClassNotFoundException,SQLException
     {
@@ -82,7 +81,6 @@ public class AddStaff
         String password="";
         Connection con= DriverManager.getConnection(url, uNAme, password);
 
-
         //Creating Stratment
         Statement st=con.createStatement();
 
@@ -92,7 +90,6 @@ public class AddStaff
         ResultSet rs=st.executeQuery(sqlSelect);
 
         ArrayList<String> actual=new ArrayList<>();
-
 
         while (rs.next())
         {
@@ -116,6 +113,5 @@ public class AddStaff
         expected.add(login);
 */
         Assert.assertEquals(actual,expected);
-
  }
 }

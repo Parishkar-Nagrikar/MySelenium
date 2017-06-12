@@ -1,4 +1,4 @@
-<suite name="Auyomation Testing" verbose="1" >
+<suite name="Automation Testing" verbose="1" >
 
     <listeners>
         <listener class-name="org.testng.reporters.EmailableReporter" />
@@ -19,6 +19,11 @@
     <test name="Data Provider From Exel" >
         <classes>
             <class name="DoctorPlus.DataProvider.DataProvidersFromExelTest" />
+        </classes>
+    </test>
+    <test name="Extent Report" >
+        <classes>
+            <class name="DoctorPlus.ExtentReport.ExtentReportDemo" />
         </classes>
     </test>
 </suite>

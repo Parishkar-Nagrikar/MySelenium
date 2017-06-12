@@ -1,6 +1,6 @@
 package DoctorPlus.TestNG;
-
 import Util.Utitily;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,6 +16,8 @@ public class AddStaffDoc
     @Test
     public void Login()
     {
+
+
         System.out.println("Login called");
         WebDriver driver;
         System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
