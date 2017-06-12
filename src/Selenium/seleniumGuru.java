@@ -62,6 +62,10 @@ public class seleniumGuru
         webDriver.findElement(By.xpath("//input[@value='Submit']")).click();
 
 
+
+
+
+
         System.out.println("Program completed");
     }
 }
