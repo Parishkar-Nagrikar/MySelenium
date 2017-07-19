@@ -1,5 +1,8 @@
 package Selenium;
 
+import atu.testrecorder.ATUTestRecorder;
+import atu.testrecorder.exceptions.ATUTestRecorderException;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,8 +15,10 @@ import org.openqa.selenium.support.ui.Select;
 public class seleniumGuru
 {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws ATUTestRecorderException {
+        //Start Recording Test
+        ATUTestRecorder recorder=new ATUTestRecorder("E:\\Development\\Voymlabs\\Recordings","operations",false);
+        recorder.start();
         System.setProperty("webdriver.chrome.driver","Drivers/chromedriver.exe");
 
         WebDriver webDriver=new ChromeDriver();
@@ -61,10 +66,32 @@ public class seleniumGuru
         //Click On Submit
         webDriver.findElement(By.xpath("//input[@value='Submit']")).click();
 
+        //manage Alert
+        Alert alert=webDriver.switchTo().alert();
+        alert.accept();
+        // alert.dismiss();
+        // String textAlert=alert.getText();
+        // alert.sendKeys("alert text");
 
+        //value="Display a confirm box"
+        webDriver.findElement(By.xpath("//input[@value='Display a confirm box']")).click();
+        alert.accept();
 
+///handling the new tab
 
+        webDriver.findElement(By.xpath("//*[@id=\"sampleform\"]/table/tbody/tr[12]/td/a")).click();
 
+        for(String childTab:webDriver.getWindowHandles())
+        {
+            webDriver.switchTo().window(childTab);
+
+        }
+
+        System.out.println(webDriver.getTitle());
+
+//Recording
+
+recorder.stop();
 
         System.out.println("Program completed");
     }
