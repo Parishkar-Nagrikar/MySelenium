@@ -70,3 +70,4 @@ public class JUnitDemo2
         System.out.println("Program Completed");
     }
 }
+
